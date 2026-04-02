@@ -1,0 +1,44 @@
+Bối cảnh: 
+Xây dựng hệ thống quản lý đặt phòng khách sạn với CRUD đầy đủ, Local Storage, và thông 
+báo thành công sau mỗi thao tác. Hệ thống có validation phức tạp và yêu cầu hiển thị toast 
+notification cho cả thành công và lỗi. 
+Yêu cầu: 
+1. Trang thêm đặt phòng (add-booking.html): 
+Các trường thông tin: - - - - - - - - - - 
+Mã đặt phòng (Booking ID) 
+Họ tên khách (Customer Name) 
+Số điện thoại (Phone) 
+Loại phòng (Select: Standard, Deluxe, Suite, VIP) 
+Ngày nhận phòng (Check-in Date) 
+Ngày trả phòng (Check-out Date) 
+Số người lớn (Adults) 
+Số trẻ em (Children) 
+Mã khuyến mãi (Promo Code) 
+Xác nhận mã (Confirm Promo) 
+Validate form: - - - - - - 
+Mã đặt phòng: PH + 6 chữ số (PH123456) 
+Họ tên: 2-50 ký tự, chỉ chữ/số/khoảng trắng 
+Số điện thoại: 10 số, bắt đầu 0 
+Check-in: Không trống, phải trước Check-out ít nhất 1 ngày 
+Check-out: Sau Check-in ít nhất 1 ngày, không quá 30 ngày 
+Adults: 1-4 người 
+- - - 
+Xử lý: - - - 
+Children: 0-6 người 
+Promo Code: 8 ký tự, format SAVE20% 
+Xác nhận mã: Phải khớp Promo Code 
+Lưu vào Local Storage với ngày tạo tự động 
+Hiển thị toast “Đặt phòng thành công!” 
+Chuyển hướng sau 2 giây 
+2. Trang quản lý đặt phòng (bookings.html): - 
+Bảng hiển thị tất cả booking từ Local Storage - - - - - 
+Cột Actions: Sửa và Hủy 
+Sửa: Load dữ liệu về form, cập nhật Local Storage 
+Hủy: Xác nhận rồi chuyển trạng thái "Cancelled" và hiển thị toast thành công 
+Thống kê: Tổng booking, số phòng trống, doanh thu dự kiến 
+Tìm kiếm theo mã đặt phòng hoặc tên khách 
+3. Yêu cầu thông báo: - 
+THÊM MỚI: “Đặt phòng PHxxxxxx thành công!” - - - 
+SỬA: “Cập nhật đặt phòng thành công!” 
+HỦY: “Hủy đặt phòng thành công!” 
+LỖI: “Vui lòng kiểm tra lại thông tin!” 

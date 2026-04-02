@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Chi tiêu Cá nhân</title>
+    <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+    <div class="container py-4">
+        <h2 class="text-center mb-4 fw-bold text-dark">Quản lý Chi tiêu Cá nhân</h2>
+        
+        <!-- Summary Section -->
+        <div class="row mb-4 g-3">
+            <div class="col-md-4">
+                <div class="card summary-card text-white p-3">
+                    <h5>Tổng Thu nhập</h5>
+                    <h3 id="totalIncome">0 VND</h3>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card summary-card text-white p-3">
+                    <h5>Tổng Chi tiêu</h5>
+                    <h3 id="totalExpense">0 VND</h3>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card summary-card text-white p-3">
+                    <h5>Số dư</h5>
+                    <h3 id="balance">0 VND</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filter Section -->
+        <div class="card mb-4 border-0 shadow-sm">
+            <div class="card-body">
+                <h6 class="fw-bold mb-3 mt-1">Lọc và Tìm kiếm</h6>
+                <div class="row g-3">
+                    <div class="col-md-3">
+                        <select id="filterType" class="form-select">
+                            <option value="all">Tất cả loại</option>
+                            <option value="income">Thu nhập</option>
+                            <option value="expense">Chi tiêu</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <select id="filterCategory" class="form-select">
+                            <option value="all">Tất cả danh mục</option>
+                            <optgroup label="Thu nhập">
+                                <option value="Lương">Lương</option>
+                                <option value="Thưởng">Thưởng</option>
+                                <option value="Đầu tư">Đầu tư</option>
+                            </optgroup>
+                            <optgroup label="Chi tiêu">
+                                <option value="Ăn uống">Ăn uống</option>
+                                <option value="Di chuyển">Di chuyển</option>
+                                <option value="Giải trí">Giải trí</option>
+                                <option value="Học tập">Học tập</option>
+                                <option value="Khác">Khác</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="date" id="filterStartDate" class="form-control" title="Từ ngày">
+                    </div>
+                    <div class="col-md-3">
+                        <input type="date" id="filterEndDate" class="form-control" title="Đến ngày">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <!-- Form Section -->
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <h6 class="fw-bold mb-3 mt-1" id="formTitle">Thêm Giao dịch</h6>
+                        <form id="transactionForm" novalidate>
+                            <input type="hidden" id="editId">
+                            <div class="mb-3">
+                                <label class="form-label text-muted small">Tên giao dịch</label>
+                                <input type="text" id="name" class="form-control" required>
+                                <div class="invalid-feedback">Tên giao dịch không được trống và từ 3-100 ký tự.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label text-muted small">Loại</label>
+                                <select id="type" class="form-select" required>
+                                    <option value="" selected disabled>Chọn loại</option>
+                                    <option value="income">Thu nhập</option>
+                                    <option value="expense">Chi tiêu</option>
+                                </select>
+                                <div class="invalid-feedback">Vui lòng chọn loại giao dịch.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label text-muted small">Số tiền</label>
+                                <input type="number" id="amount" class="form-control" required>
+                                <div class="invalid-feedback">Số tiền phải lớn hơn 0 và nhỏ hơn 1 tỷ.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label text-muted small">Danh mục</label>
+                                <select id="category" class="form-select" disabled required>
+                                    <option value="" selected disabled>Chọn danh mục</option>
+                                </select>
+                                <div class="invalid-feedback">Vui lòng chọn danh mục.</div>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label text-muted small">Ngày giao dịch</label>
+                                <input type="date" id="date" class="form-control" required>
+                                <div class="invalid-feedback">Ngày này không hợp lệ hoặc ở tương lai.</div>
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="submitBtn">Thêm</button>
+                            <button type="button" class="btn btn-secondary d-none" id="cancelBtn">Hủy</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- List Section -->
+            <div class="col-md-8">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body bg-white rounded">
+                        <h6 class="fw-bold mb-4 mt-1">Danh sách Giao dịch</h6>
+                        <div class="row g-3" id="transactionList">
+                            <!-- Items will be generated here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

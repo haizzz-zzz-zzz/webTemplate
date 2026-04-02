@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Quản lý danh sách đặt phòng khách sạn" />
+    <title>Quản lý đặt phòng - Quản lý Khách sạn</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+    <!-- Toast Container -->
+    <div id="toast-container"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>Quản lý Đặt phòng Khách sạn</h1>
+        <nav class="header-nav">
+            <a href="add-booking.html" class="nav-btn">Thêm đặt phòng</a>
+            <a href="bookings.html" class="nav-btn active">Quản lý đặt phòng</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="card">
+            <h2 class="card-title">Danh sách đặt phòng</h2>
+
+            <!-- Search -->
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Tìm mã đặt phòng hoặc tên khách" />
+                <button class="btn-reload" id="reloadBtn">Tải lại</button>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-row">
+                <div class="stat-card">
+                    <div class="stat-value" id="totalBookings">0</div>
+                    <div class="stat-label">Tổng booking</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="availableRooms">0</div>
+                    <div class="stat-label">Phòng trống (ước tính)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="expectedRevenue">0</div>
+                    <div class="stat-label">Doanh thu dự kiến (VND)</div>
+                </div>
+            </div>
+
+            <!-- Table -->
+            <div class="table-wrapper">
+                <table id="bookingsTable">
+                    <thead>
+                        <tr>
+                            <th>Mã</th>
+                            <th>Khách</th>
+                            <th>Phone</th>
+                            <th>Loại</th>
+                            <th>Check-in</th>
+                            <th>Check-out</th>
+                            <th>Người lớn/Trẻ em</th>
+                            <th>Promo</th>
+                            <th>Trạng thái</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bookingsBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

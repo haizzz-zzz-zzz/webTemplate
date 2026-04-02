@@ -1,0 +1,8 @@
+1. Xây dựng trang web bằng reactjs(jsx), bootstrap(đã tải local)
+2. Cấu trúc file trong cautruc.txt
+3. Code để trong /code
+4. Chỉ genarated code
+5. Tạo file data.js(Dịnh dạng JSON) để chứa dữ liệu. Dữ liệu trong file lấy trong main.png
+6. Giao diện của trang web là hai file png
+7. Chia nhỏ các component hợp lý
+

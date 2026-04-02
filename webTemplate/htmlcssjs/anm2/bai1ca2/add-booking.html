@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Thêm đặt phòng khách sạn - Hệ thống quản lý đặt phòng" />
+    <title>Thêm đặt phòng - Quản lý Khách sạn</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+    <!-- Toast Container -->
+    <div id="toast-container"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>Quản lý Đặt phòng Khách sạn</h1>
+        <nav class="header-nav">
+            <a href="add-booking.html" class="nav-btn active">Thêm đặt phòng</a>
+            <a href="bookings.html" class="nav-btn">Quản lý đặt phòng</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="card">
+            <h2 class="card-title" id="formTitle">Thêm / Cập nhật đặt phòng</h2>
+
+            <form id="bookingForm" novalidate>
+                <!-- Thông tin cơ bản -->
+                <p class="form-section-title">Thông tin cơ bản</p>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="bookingId">Mã đặt phòng</label>
+                        <input type="text" id="bookingId" placeholder="PH123456" />
+                        <span class="hint">PH + 6 chữ số</span>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="customerName">Họ tên khách</label>
+                        <input type="text" id="customerName" placeholder="Nguyen Van A" />
+                        <span class="hint">2-50 ký tự, chỉ chữ/số/khoảng trắng</span>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Số điện thoại</label>
+                        <input type="text" id="phone" placeholder="0xxxxxxxxx" />
+                        <span class="hint">10 số, bắt đầu 0</span>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="roomType">Loại phòng</label>
+                        <select id="roomType">
+                            <option value="">Chọn loại phòng</option>
+                            <option value="Standard">Standard</option>
+                            <option value="Deluxe">Deluxe</option>
+                            <option value="Suite">Suite</option>
+                            <option value="VIP">VIP</option>
+                        </select>
+                        <span class="error-message"></span>
+                    </div>
+                </div>
+
+                <hr class="form-divider" />
+
+                <!-- Thời gian -->
+                <p class="form-section-title">Thời gian</p>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="checkIn">Ngày nhận phòng</label>
+                        <input type="date" id="checkIn" />
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="checkOut">Ngày trả phòng</label>
+                        <input type="date" id="checkOut" />
+                        <span class="hint">Ít nhất 1 ngày sau Check-in, không quá 30 ngày</span>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="adults">Số người lớn</label>
+                        <input type="number" id="adults" value="1" min="1" max="4" />
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="children">Số trẻ em</label>
+                        <input type="number" id="children" value="0" min="0" max="6" />
+                        <span class="error-message"></span>
+                    </div>
+                </div>
+
+                <hr class="form-divider" />
+
+                <!-- Khuyến mãi -->
+                <p class="form-section-title">Khuyến mãi</p>
+                <div class="form-row cols-2">
+                    <div class="form-group">
+                        <label for="promoCode">Mã khuyến mãi</label>
+                        <input type="text" id="promoCode" placeholder="SAVE20%" />
+                        <span class="hint">8 ký tự, format SAVE20%</span>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPromo">Xác nhận mã</label>
+                        <input type="text" id="confirmPromo" placeholder="Nhập lại mã" />
+                        <span class="error-message"></span>
+                    </div>
+                </div>
+
+                <!-- Actions -->
+                <div class="form-actions">
+                    <button type="submit" id="submitBtn" class="btn btn-primary">Lưu đặt phòng</button>
+                    <button type="button" id="resetBtn" class="btn btn-secondary">Làm mới</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

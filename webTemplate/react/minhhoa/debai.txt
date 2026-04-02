@@ -1,0 +1,83 @@
+1. Xây dựng giao diện cơ bản
+
+Thiết kế một giao diện quản lý dữ liệu (ví dụ: nhân sự, sinh viên, sản phẩm, ...) với các yêu cầu:
+
+· Có bố cục rõ ràng (header, nội dung chính, bảng dữ liệu,...).
+
+· Hiển thị danh sách dữ liệu dưới dạng bảng.
+
+· Có nút chức năng để thêm mới dữ liệu.
+
+· Khi người dùng thao tác thêm mới → hiển thị một form dạng pop-up.
+2. Xử lý dữ liệu bằng 
+
+2.1. Tạo dữ liệu giả lập
+
+· Tạo file data.js
+
+· Dữ liệu ở dạng JSON
+
+· Ít nhất 5 bản ghi mẫu
+
+· Nội dung dữ liệu phù hợp với giao diện đã thiết kế
+2.2. Kiểm tra dữ liệu nhập (Validation)
+
+Yêu cầu validate form:
+
+· Không được để trống các trường
+
+· Họ tên:
+
+o Tối đa 30 ký tự
+· Email:
+
+o Đúng định dạng chuẩn
+
+· Số điện thoại:
+
+o Đúng 10 chữ số
+
+· Khi nhập sai:
+
+o Hiển thị thông báo lỗi bằng tiếng Việt
+3. Phát triển ứng dụng với ReactJS
+
+Chuyển đổi ứng dụng sang React với các bước:
+
+
+3.1. Hiển thị dữ liệu
+
+· Bước 1: Dựng giao diện tĩnh (hard-code dữ liệu)
+
+· Bước 2: Import dữ liệu từ data.js
+
+· Bước 3: Render danh sách ra giao diện
+
+👉 Lưu ý:
+
+· Truyền dữ liệu qua Props
+
+· Xác định rõ:
+
+o Thành phần nào dùng State
+
+o Thành phần nào nhận Props
+
+
+3.2. Thêm mới dữ liệu
+
+· Lấy dữ liệu từ form: (Có thể lựa chọn)
+
+o onChange
+
+o onSubmit
+
+· Kiểm tra dữ liệu:
+
+o Nếu không hợp lệ → không thêm
+
+o Có thể kết hợp validate HTML5
+
+· Nếu hợp lệ:
+
+o Thêm dữ liệu vào danh sách (State)

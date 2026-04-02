@@ -1,0 +1,67 @@
+Hãy xây dựng một trang web bằng react, bootstrap, jquery
+Yêu cầu:
+1. Hiển thị danh sách sinh viên đã được lưu (lấy từ Local Storage) dưới dạng bảng - - - - 
+2. Mỗi dòng của bảng phải có các thao tác: Sửa và Xoá sinh viên 
+3. Khi chọn Sửa, đưa dữ liệu sinh viên trở lại form để chỉnh sửa 
+4. Khi chọn Xoá, hiển thị thông báo xác nhận trước khi xoá sinh viên khỏi danh sách 
+5. Hiển thị tổng số sinh viên và điểm trung bình của lớp 
+Khi bấm thêm sinh viên:  Thêm sinh viên
+dạng POP UP. 
+Form thêm sinh viên có yêu cầu sau: 
+Các trường thông tin: 
+- Mã sinh viên (Student ID) 
+- Họ và tên (Full Name) 
+- Ngày sinh (Date of Birth) 
+- Lớp học (Select option: A, B, C, D) 
+- Điểm trung bình (GPA) 
+- Email sinh viên 
+- Mật khẩu tài khoản (Password) 
+- Xác nhận mật khẩu (Confirm Password) 
+Validate form sử dụng jQuery hoặc JS Validate: 
+- Mã sinh viên: 
+- Không được để trống 
+- sẽ hiển thị FORM “Thêm sinh viên” 
+- Phải bắt đầu bằng "SV" theo sau là 6 chữ số (ví dụ: SV123456) 
+- Xử lý: 
+- Họ và tên: 
+- Không được để trống 
+- Chỉ chứa chữ cái và khoảng trắng 
+- Ngày sinh: 
+- Không được để trống 
+- Phải từ 18 tuổi trở lên - 
+Điểm trung bình: 
+- Phải là số từ 0 đến 10 
+- Cho phép 2 chữ số thập phân - 
+Email sinh viên: 
+- Không được để trống 
+- Phải đúng định dạng email 
+- Phải kết thúc bằng "@student.edu.vn" 
+Mật khẩu tài khoản: 
+- Không được để trống 
+- Ít nhất 8 ký tự 
+- Phải chứa ít nhất 1 chữ hoa, 1 chữ thường, 1 số và 1 ký tự đặc biệt 
+Xác nhận mật khẩu: 
+- Không được để trống 
+- Phải khớp với mật khẩu tài khoản 
+Sau khi nhập dữ liệu hợp lệ, lưu thông tin sinh viên vào Local Storage 
+Chuyển hướng về trang quản lý sinh viên 
+tạo file data.js
+- Dữ liệu ở dạng JSON
+- Ít nhất 5 bản ghi mẫu
+- Nội dung dữ liệu phù hợp với giao diện đã thiết kế
+
+
+
+Cấu hình soucre code 
+code/
+├── node_modules/       # Kho chứa thư viện (Đừng động vào)
+├── public/             # Chứa file tĩnh (favicon, robots.txt)
+├── src/                # CODE CỦA BẠN Ở ĐÂY
+│   ├── assets/         # Ảnh, icon
+│   ├── components/     # Các component thành phần (Header, Footer, Form)
+│   ├── pages/          # Các trang (Trang chủ, Giới thiệu)
+│   ├── App.jsx         # Component chính
+│   └── main.jsx        # Điểm bắt đầu (Entry point)
+├── index.html          # File HTML duy nhất của cả app
+├── package.json        # Khai báo tên dự án, thư viện sử dụng
+└── vite.config.js      # Cấu hình Vite

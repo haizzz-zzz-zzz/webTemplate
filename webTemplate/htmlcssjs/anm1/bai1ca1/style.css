@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f6fc;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.text-center { text-align: center; }
+
+.summary-box {
+    background: linear-gradient(to right, #e74c3c, #1abc9c);
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+}
+
+.btn-primary { background-color: #27ae60; margin-bottom: 15px; }
+.btn-success { background-color: #27ae60; flex: 1; margin-right: 10px; }
+.btn-danger { background-color: #e74c3c; flex: 1; }
+.btn-edit { background-color: #3498db; margin-right: 5px; }
+.btn-delete { background-color: #e74c3c; }
+.btn-save{ background-color: #0ca248; }
+.btn-cancel { background-color: #b01909; }
+.btn-add-student { background-color: #04ab58; }
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.table th, .table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #8e44ad;
+    color: white;
+}
+
+/* Modal / Popup */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 10; 
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5); 
+}
+
+.modal-content {
+    background-color: #f9f9f9;
+    margin: 5% auto;
+    padding: 20px 30px;
+    border: 1px solid #888;
+    width: 500px;
+    border-radius: 8px;
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.error-msg {
+    color: red;
+    font-size: 12px;
+    display: block;
+    margin-top: 4px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}

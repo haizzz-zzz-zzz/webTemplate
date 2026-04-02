@@ -1,0 +1,72 @@
+export const initialBookings = [
+  {
+    id: "PH000001",
+    customerName: "Nguyen Van A",
+    phone: "0912345678",
+    roomType: "Standard",
+    checkIn: "2026-04-01",
+    checkOut: "2026-04-04",
+    adults: 2,
+    children: 1,
+    promoCode: "SAVE20%",
+    confirmPromo: "SAVE20%",
+    status: "Booked",
+    createdAt: new Date().toISOString()
+  },
+  {
+    id: "PH000002",
+    customerName: "Le Thi B",
+    phone: "0987654321",
+    roomType: "Deluxe",
+    checkIn: "2026-05-10",
+    checkOut: "2026-05-13",
+    adults: 1,
+    children: 0,
+    promoCode: "SAVE20%",
+    confirmPromo: "SAVE20%",
+    status: "Booked",
+    createdAt: new Date().toISOString()
+  },
+  {
+    id: "PH000003",
+    customerName: "Tran Van C",
+    phone: "0901122334",
+    roomType: "Suite",
+    checkIn: "2026-04-15",
+    checkOut: "2026-04-20",
+    adults: 3,
+    children: 2,
+    promoCode: "SAVE20%",
+    confirmPromo: "SAVE20%",
+    status: "Booked",
+    createdAt: new Date().toISOString()
+  },
+  {
+    id: "PH000004",
+    customerName: "Pham Thi D",
+    phone: "0934455667",
+    roomType: "VIP",
+    checkIn: "2026-05-01",
+    checkOut: "2026-05-02",
+    adults: 2,
+    children: 0,
+    promoCode: "SAVE20%",
+    confirmPromo: "SAVE20%",
+    status: "Booked",
+    createdAt: new Date().toISOString()
+  },
+  {
+    id: "PH000005",
+    customerName: "Hoang Van E",
+    phone: "0977889900",
+    roomType: "Deluxe",
+    checkIn: "2026-04-12",
+    checkOut: "2026-04-18",
+    adults: 4,
+    children: 1,
+    promoCode: "SAVE20%",
+    confirmPromo: "SAVE20%",
+    status: "Cancelled",
+    createdAt: new Date().toISOString()
+  }
+];

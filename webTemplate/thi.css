@@ -1,0 +1,1233 @@
+/* ============================================================
+   CSS CƠ BẢN - TỔNG HỢP CÁC THUỘC TÍNH THEO TỪNG PHẦN
+   ============================================================ */
+
+/* ============================================================
+   1. SELECTOR (BỘ CHỌN)
+   ============================================================ */
+
+/* --- 1.1. Selector cơ bản --- */
+* {
+    /* Universal selector - chọn tất cả phần tử */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Element selector */
+p {
+    color: black;
+}
+
+/* Class selector */
+.ten-class {
+    color: red;
+}
+
+/* ID selector */
+#ten-id {
+    color: blue;
+}
+
+/* --- 1.2. Combinator Selector --- */
+
+/* Descendant selector (con cháu) */
+div p {
+    color: green;
+}
+
+/* Child selector (con trực tiếp) */
+div>p {
+    color: orange;
+}
+
+/* Adjacent sibling selector (anh em kề nhau) */
+h2+p {
+    color: purple;
+}
+
+/* General sibling selector (tất cả anh em) */
+h2~p {
+    color: brown;
+}
+
+/* --- 1.3. Attribute Selector --- */
+input[type="text"] {
+    border: 1px solid #ccc;
+}
+
+a[href^="https"] {
+    /* Bắt đầu bằng "https" */
+    color: green;
+}
+
+a[href$=".pdf"] {
+    /* Kết thúc bằng ".pdf" */
+    color: red;
+}
+
+a[href*="example"] {
+    /* Chứa "example" */
+    color: blue;
+}
+
+/* --- 1.4. Pseudo-class Selector --- */
+a:hover {
+    color: red;
+}
+
+a:active {
+    color: darkred;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:link {
+    color: blue;
+}
+
+input:focus {
+    outline: 2px solid blue;
+}
+
+li:first-child {
+    font-weight: bold;
+}
+
+li:last-child {
+    font-style: italic;
+}
+
+li:nth-child(2) {
+    color: red;
+}
+
+li:nth-child(odd) {
+    background-color: #f0f0f0;
+}
+
+li:nth-child(even) {
+    background-color: #e0e0e0;
+}
+
+p:not(.special) {
+    color: gray;
+}
+
+input:checked {
+    accent-color: green;
+}
+
+input:disabled {
+    opacity: 0.5;
+}
+
+input:required {
+    border-color: red;
+}
+
+/* --- 1.5. Pseudo-element Selector --- */
+p::before {
+    content: "» ";
+    color: red;
+}
+
+p::after {
+    content: " «";
+    color: red;
+}
+
+p::first-line {
+    font-weight: bold;
+}
+
+p::first-letter {
+    font-size: 2em;
+    color: red;
+}
+
+::selection {
+    background-color: yellow;
+    color: black;
+}
+
+input::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+
+/* ============================================================
+   2. TEXT (VĂN BẢN)
+   ============================================================ */
+.text-example {
+    /* --- Màu sắc --- */
+    color: #333333;
+    /* Màu chữ */
+
+    /* --- Font chữ --- */
+    font-family: Arial, Helvetica, sans-serif;
+    /* Phông chữ */
+    font-size: 16px;
+    /* Kích thước chữ: px, em, rem, %, vw */
+    font-weight: bold;
+    /* Độ đậm: normal, bold, 100-900 */
+    font-style: italic;
+    /* Kiểu chữ: normal, italic, oblique */
+    font-variant: small-caps;
+    /* Biến thể: normal, small-caps */
+
+    /* --- Căn chỉnh text --- */
+    text-align: center;
+    /* Căn ngang: left, right, center, justify */
+    text-indent: 20px;
+    /* Thụt đầu dòng */
+    vertical-align: middle;
+    /* Căn dọc: top, middle, bottom, baseline */
+
+    /* --- Trang trí text --- */
+    text-decoration: underline;
+    /* Trang trí: none, underline, overline, line-through */
+    text-decoration-color: red;
+    /* Màu đường trang trí */
+    text-decoration-style: wavy;
+    /* Kiểu: solid, double, dotted, dashed, wavy */
+    text-transform: uppercase;
+    /* Chuyển đổi: uppercase, lowercase, capitalize, none */
+
+    /* --- Khoảng cách --- */
+    letter-spacing: 2px;
+    /* Khoảng cách giữa các ký tự */
+    word-spacing: 5px;
+    /* Khoảng cách giữa các từ */
+    line-height: 1.6;
+    /* Chiều cao dòng */
+
+    /* --- Xử lý văn bản --- */
+    white-space: nowrap;
+    /* Xử lý khoảng trắng: normal, nowrap, pre, pre-wrap */
+    word-break: break-word;
+    /* Ngắt từ: normal, break-all, break-word */
+    overflow-wrap: break-word;
+    /* Ngắt dòng khi tràn */
+    text-overflow: ellipsis;
+    /* Hiển thị "..." khi tràn */
+
+    /* --- Đổ bóng text --- */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    /* x y blur color */
+}
+
+
+/* ============================================================
+   3. BACKGROUND (NỀN)
+   ============================================================ */
+.background-example {
+    /* --- Màu nền --- */
+    background-color: #f0f0f0;
+
+    /* --- Ảnh nền --- */
+    background-image: url("hinh.jpg");
+    background-repeat: no-repeat;
+    /* repeat, repeat-x, repeat-y, no-repeat */
+    background-size: cover;
+    /* auto, cover, contain, 100px 200px, 50% */
+    background-position: center center;
+    /* top, bottom, left, right, center, 50% 50% */
+    background-attachment: fixed;
+    /* scroll, fixed, local */
+    background-origin: border-box;
+    /* border-box, padding-box, content-box */
+    background-clip: padding-box;
+    /* border-box, padding-box, content-box, text */
+
+    /* --- Viết tắt --- */
+    background: #f0f0f0 url("hinh.jpg") no-repeat center/cover fixed;
+
+    /* --- Gradient --- */
+    background: linear-gradient(to right, #ff0000, #0000ff);
+    background: linear-gradient(45deg, red, yellow, green);
+    background: radial-gradient(circle, #ff0000, #0000ff);
+    background: conic-gradient(red, yellow, green, blue, red);
+
+    /* --- Nhiều nền --- */
+    background-image: url("hinh1.jpg"), url("hinh2.jpg");
+    background-position: left top, right bottom;
+    background-repeat: no-repeat, repeat;
+}
+
+
+/* ============================================================
+   4. BOX MODEL (MÔ HÌNH HỘP)
+   ============================================================ */
+.box-model-example {
+    /* --- Kích thước --- */
+    width: 300px;
+    /* Chiều rộng: px, %, em, rem, vw, auto */
+    height: 200px;
+    /* Chiều cao: px, %, em, rem, vh, auto */
+    min-width: 100px;
+    /* Chiều rộng tối thiểu */
+    max-width: 500px;
+    /* Chiều rộng tối đa */
+    min-height: 50px;
+    /* Chiều cao tối thiểu */
+    max-height: 400px;
+    /* Chiều cao tối đa */
+
+    /* --- Box-sizing --- */
+    box-sizing: border-box;
+    /* content-box (mặc định), border-box */
+
+    /* --- Margin (lề ngoài) --- */
+    margin: 10px;
+    /* Tất cả 4 hướng */
+    margin: 10px 20px;
+    /* Trên-dưới | Trái-phải */
+    margin: 10px 20px 30px;
+    /* Trên | Trái-phải | Dưới */
+    margin: 10px 20px 30px 40px;
+    /* Trên | Phải | Dưới | Trái */
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    margin-left: 40px;
+    margin: 0 auto;
+    /* Căn giữa ngang */
+
+    /* --- Padding (lót bên trong) --- */
+    padding: 10px;
+    padding: 10px 20px;
+    padding: 10px 20px 30px;
+    padding: 10px 20px 30px 40px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+
+    /* --- Border (viền) --- */
+    border: 2px solid #333;
+    /* Viết tắt: width style color */
+    border-width: 2px;
+    /* Độ dày viền */
+    border-style: solid;
+    /* none, solid, dashed, dotted, double, groove, ridge, inset, outset */
+    border-color: #333;
+    /* Màu viền */
+    border-top: 1px solid red;
+    /* Viền riêng từng cạnh */
+    border-right: 2px dashed blue;
+    border-bottom: 3px dotted green;
+    border-left: 4px double orange;
+
+    /* --- Border-radius (bo góc) --- */
+    border-radius: 10px;
+    /* Bo tất cả góc */
+    border-radius: 50%;
+    /* Bo tròn hoàn toàn */
+    border-radius: 10px 20px 30px 40px;
+    /* Trên-trái | Trên-phải | Dưới-phải | Dưới-trái */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 40px;
+
+    /* --- Outline (đường viền ngoài) --- */
+    outline: 2px solid blue;
+    outline-offset: 5px;
+    /* Khoảng cách outline với border */
+
+    /* --- Box Shadow (đổ bóng hộp) --- */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    /* x y blur color */
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.3);
+    /* x y blur spread color */
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.3);
+    /* Bóng bên trong */
+    box-shadow: 2px 2px 5px red, -2px -2px 5px blue;
+    /* Nhiều bóng */
+
+    /* --- Overflow (tràn nội dung) --- */
+    overflow: hidden;
+    /* visible, hidden, scroll, auto */
+    overflow-x: scroll;
+    /* Tràn ngang */
+    overflow-y: auto;
+    /* Tràn dọc */
+}
+
+
+/* ============================================================
+   5. DISPLAY & VISIBILITY (HIỂN THỊ)
+   ============================================================ */
+.display-example {
+    /* --- Display --- */
+    display: block;
+    /* Phần tử khối - chiếm hết chiều rộng */
+    display: inline;
+    /* Phần tử nội tuyến - không set width/height được */
+    display: inline-block;
+    /* Nội tuyến nhưng set được width/height */
+    display: none;
+    /* Ẩn hoàn toàn, không chiếm không gian */
+    display: flex;
+    /* Flexbox container */
+    display: inline-flex;
+    /* Flexbox nội tuyến */
+    display: grid;
+    /* Grid container */
+    display: inline-grid;
+    /* Grid nội tuyến */
+    display: table;
+    /* Hiển thị như bảng */
+
+    /* --- Visibility --- */
+    visibility: visible;
+    /* Hiển thị (mặc định) */
+    visibility: hidden;
+    /* Ẩn nhưng VẪN chiếm không gian */
+
+    /* --- Opacity (độ mờ) --- */
+    opacity: 0.5;
+    /* 0 = trong suốt, 1 = hiện đầy đủ */
+}
+
+
+/* ============================================================
+   6. POSITION (VỊ TRÍ)
+   ============================================================ */
+.position-example {
+    /* --- Position --- */
+    position: static;
+    /* Mặc định - theo luồng bình thường */
+    position: relative;
+    /* Tương đối - dịch chuyển so với vị trí gốc */
+    position: absolute;
+    /* Tuyệt đối - so với parent có position != static */
+    position: fixed;
+    /* Cố định - so với viewport */
+    position: sticky;
+    /* Dính - kết hợp relative và fixed */
+
+    /* --- Tọa độ (dùng khi position != static) --- */
+    top: 10px;
+    right: 20px;
+    bottom: 30px;
+    left: 40px;
+
+    /* --- Z-index (thứ tự xếp chồng) --- */
+    z-index: 10;
+    /* Số lớn hơn = nằm trên */
+}
+
+
+/* ============================================================
+   7. FLOAT & CLEAR
+   ============================================================ */
+.float-example {
+    float: left;
+    /* Trôi sang trái */
+    float: right;
+    /* Trôi sang phải */
+    float: none;
+    /* Không trôi (mặc định) */
+}
+
+.clear-example {
+    clear: left;
+    /* Xóa float trái */
+    clear: right;
+    /* Xóa float phải */
+    clear: both;
+    /* Xóa cả hai */
+}
+
+/* Clearfix - kỹ thuật phổ biến */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* ============================================================
+   8. FLEXBOX (BỐ CỤC LINH HOẠT)
+   ============================================================ */
+
+/* --- 8.1. Flex Container (phần tử cha) --- */
+.flex-container {
+    display: flex;
+
+    /* Hướng sắp xếp */
+    flex-direction: row;
+    /* row, row-reverse, column, column-reverse */
+
+    /* Xuống dòng */
+    flex-wrap: wrap;
+    /* nowrap, wrap, wrap-reverse */
+
+    /* Viết tắt direction + wrap */
+    flex-flow: row wrap;
+
+    /* Căn chỉnh trục chính (main axis) */
+    justify-content: center;
+    /* flex-start, flex-end, center, space-between, space-around, space-evenly */
+
+    /* Căn chỉnh trục phụ (cross axis) */
+    align-items: center;
+    /* flex-start, flex-end, center, stretch, baseline */
+
+    /* Căn chỉnh nhiều dòng */
+    align-content: space-between;
+    /* flex-start, flex-end, center, stretch, space-between, space-around */
+
+    /* Khoảng cách giữa các phần tử */
+    gap: 10px;
+    /* Cả hai hướng */
+    row-gap: 10px;
+    /* Khoảng cách hàng */
+    column-gap: 20px;
+    /* Khoảng cách cột */
+}
+
+/* --- 8.2. Flex Items (phần tử con) --- */
+.flex-item {
+    /* Tỉ lệ mở rộng */
+    flex-grow: 1;
+    /* 0 = không mở rộng, 1+ = mở rộng theo tỉ lệ */
+
+    /* Tỉ lệ thu nhỏ */
+    flex-shrink: 0;
+    /* 0 = không thu nhỏ, 1 = thu nhỏ (mặc định) */
+
+    /* Kích thước cơ sở */
+    flex-basis: 200px;
+    /* auto, px, %, 0 */
+
+    /* Viết tắt grow | shrink | basis */
+    flex: 1 0 200px;
+    flex: 1;
+    /* = flex: 1 1 0 */
+
+    /* Căn chỉnh riêng phần tử */
+    align-self: center;
+    /* auto, flex-start, flex-end, center, stretch, baseline */
+
+    /* Thứ tự hiển thị */
+    order: 1;
+    /* Mặc định 0, số nhỏ hơn đứng trước */
+}
+
+
+/* ============================================================
+   9. GRID (LƯỚI)
+   ============================================================ */
+
+/* --- 9.1. Grid Container (phần tử cha) --- */
+.grid-container {
+    display: grid;
+
+    /* Định nghĩa cột */
+    grid-template-columns: 200px 1fr 2fr;
+    /* Cố định + linh hoạt */
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 cột bằng nhau */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* Responsive */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Responsive + co giãn */
+
+    /* Định nghĩa hàng */
+    grid-template-rows: 100px auto 50px;
+    grid-template-rows: repeat(3, 1fr);
+
+    /* Kích thước hàng/cột tự động */
+    grid-auto-rows: minmax(100px, auto);
+    grid-auto-columns: 200px;
+
+    /* Hướng sắp xếp tự động */
+    grid-auto-flow: row;
+    /* row, column, dense, row dense, column dense */
+
+    /* Khoảng cách */
+    gap: 20px;
+    row-gap: 10px;
+    column-gap: 20px;
+
+    /* Căn chỉnh items */
+    justify-items: center;
+    /* start, end, center, stretch */
+    align-items: center;
+    /* start, end, center, stretch */
+    place-items: center center;
+    /* Viết tắt align-items | justify-items */
+
+    /* Căn chỉnh grid trong container */
+    justify-content: center;
+    /* start, end, center, stretch, space-between, space-around, space-evenly */
+    align-content: center;
+    place-content: center center;
+
+    /* Đặt tên vùng */
+    grid-template-areas:
+        "header header header"
+        "sidebar main main"
+        "footer footer footer";
+}
+
+/* --- 9.2. Grid Items (phần tử con) --- */
+.grid-item {
+    /* Vị trí cột */
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-column: 1 / 3;
+    /* Viết tắt start / end */
+    grid-column: 1 / span 2;
+    /* Bắt đầu từ cột 1, chiếm 2 cột */
+
+    /* Vị trí hàng */
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-row: 1 / 3;
+    grid-row: 1 / span 2;
+
+    /* Đặt theo tên vùng */
+    grid-area: header;
+    /* Khớp với grid-template-areas */
+
+    /* Căn chỉnh riêng phần tử */
+    justify-self: center;
+    /* start, end, center, stretch */
+    align-self: center;
+    place-self: center center;
+}
+
+
+/* ============================================================
+   10. RESPONSIVE DESIGN (THIẾT KẾ ĐÁP ỨNG)
+   ============================================================ */
+
+/* --- 10.1. Đơn vị linh hoạt --- */
+.responsive-units {
+    width: 80%;
+    /* Tỉ lệ phần trăm */
+    font-size: 1.2rem;
+    /* Tương đối với root (html) */
+    font-size: 1.2em;
+    /* Tương đối với parent */
+    width: 50vw;
+    /* 50% chiều rộng viewport */
+    height: 50vh;
+    /* 50% chiều cao viewport */
+    font-size: clamp(14px, 2vw, 22px);
+    /* Min, ưu tiên, max */
+    font-size: min(5vw, 50px);
+    font-size: max(16px, 2vw);
+}
+
+/* --- 10.2. Media Queries --- */
+
+/* Mobile first (màn hình nhỏ lên lớn) */
+@media screen and (min-width: 576px) {
+
+    /* Small devices (landscape phones) */
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    /* Medium devices (tablets) */
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    /* Large devices (desktops) */
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    /* Extra large devices */
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* Desktop first (màn hình lớn xuống nhỏ) */
+@media screen and (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+    }
+}
+
+/* Kết hợp điều kiện */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Chỉ áp dụng cho tablet */
+}
+
+/* In ấn */
+@media print {
+    .no-print {
+        display: none;
+    }
+}
+
+/* Chế độ sáng/tối */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1a1a1a;
+        color: #ffffff;
+    }
+}
+
+
+/* ============================================================
+   11. TRANSITION (CHUYỂN TIẾP)
+   ============================================================ */
+.transition-example {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+
+    /* Từng thuộc tính */
+    transition-property: background-color, transform;
+    /* Thuộc tính chuyển tiếp */
+    transition-duration: 0.3s;
+    /* Thời gian */
+    transition-timing-function: ease;
+    /* Hàm thời gian: ease, linear, ease-in, ease-out, ease-in-out, cubic-bezier() */
+    transition-delay: 0s;
+    /* Độ trễ */
+
+    /* Viết tắt: property duration timing-function delay */
+    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.5s ease-in-out;
+}
+
+.transition-example:hover {
+    background-color: red;
+    transform: scale(1.1);
+}
+
+
+/* ============================================================
+   12. ANIMATION (HOẠT ẢNH)
+   ============================================================ */
+
+/* Định nghĩa keyframes */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-20px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    75% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animation-example {
+    /* Từng thuộc tính */
+    animation-name: slideIn;
+    /* Tên keyframe */
+    animation-duration: 1s;
+    /* Thời gian */
+    animation-timing-function: ease-in-out;
+    /* Hàm thời gian */
+    animation-delay: 0s;
+    /* Độ trễ */
+    animation-iteration-count: infinite;
+    /* Số lần lặp: number, infinite */
+    animation-direction: alternate;
+    /* normal, reverse, alternate, alternate-reverse */
+    animation-fill-mode: forwards;
+    /* none, forwards, backwards, both */
+    animation-play-state: running;
+    /* running, paused */
+
+    /* Viết tắt: name duration timing delay count direction fill-mode play-state */
+    animation: slideIn 1s ease-in-out 0s 1 normal forwards running;
+    animation: bounce 2s infinite;
+}
+
+
+/* ============================================================
+   13. TRANSFORM (BIẾN ĐỔI)
+   ============================================================ */
+.transform-example {
+    /* --- Di chuyển --- */
+    transform: translateX(50px);
+    /* Dịch ngang */
+    transform: translateY(30px);
+    /* Dịch dọc */
+    transform: translate(50px, 30px);
+    /* Dịch ngang + dọc */
+
+    /* --- Xoay --- */
+    transform: rotate(45deg);
+    /* Xoay 2D */
+    transform: rotateX(45deg);
+    /* Xoay quanh trục X */
+    transform: rotateY(45deg);
+    /* Xoay quanh trục Y */
+    transform: rotateZ(45deg);
+    /* Xoay quanh trục Z */
+
+    /* --- Co giãn --- */
+    transform: scale(1.5);
+    /* Phóng to/thu nhỏ đều */
+    transform: scaleX(2);
+    /* Co giãn ngang */
+    transform: scaleY(0.5);
+    /* Co giãn dọc */
+    transform: scale(2, 0.5);
+    /* Co giãn ngang + dọc */
+
+    /* --- Nghiêng --- */
+    transform: skewX(20deg);
+    /* Nghiêng ngang */
+    transform: skewY(10deg);
+    /* Nghiêng dọc */
+    transform: skew(20deg, 10deg);
+    /* Nghiêng cả hai */
+
+    /* --- Kết hợp nhiều transform --- */
+    transform: translateX(50px) rotate(45deg) scale(1.2);
+
+    /* --- Gốc biến đổi --- */
+    transform-origin: center center;
+    /* top left, center, 50% 50%, 100px 200px */
+    transform-origin: top left;
+
+    /* --- 3D --- */
+    perspective: 1000px;
+    /* Phối cảnh 3D */
+    transform-style: preserve-3d;
+    /* flat, preserve-3d */
+    backface-visibility: hidden;
+    /* visible, hidden */
+}
+
+
+/* ============================================================
+   14. LIST (DANH SÁCH)
+   ============================================================ */
+.list-example {
+    list-style-type: disc;
+    /* disc, circle, square, decimal, lower-alpha, upper-roman, none */
+    list-style-position: inside;
+    /* inside, outside */
+    list-style-image: url("icon.png");
+
+    /* Viết tắt */
+    list-style: square inside;
+    list-style: none;
+    /* Ẩn dấu đầu dòng */
+}
+
+
+/* ============================================================
+   15. TABLE (BẢNG)
+   ============================================================ */
+.table-example {
+    border-collapse: collapse;
+    /* collapse, separate */
+    border-spacing: 5px;
+    /* Khoảng cách giữa ô (khi separate) */
+    table-layout: fixed;
+    /* auto, fixed */
+    caption-side: top;
+    /* top, bottom */
+    empty-cells: hide;
+    /* show, hide */
+    width: 100%;
+}
+
+.table-example th,
+.table-example td {
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.table-example th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.table-example tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table-example tr:hover {
+    background-color: #e9e9e9;
+}
+
+
+/* ============================================================
+   16. FORM (BIỂU MẪU)
+   ============================================================ */
+.form-input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    appearance: none;
+    /* Xóa kiểu mặc định trình duyệt */
+    resize: vertical;
+    /* none, both, horizontal, vertical (cho textarea) */
+    cursor: pointer;
+}
+
+.form-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.form-input:invalid {
+    border-color: red;
+}
+
+.form-input:valid {
+    border-color: green;
+}
+
+.form-input::placeholder {
+    color: #aaa;
+}
+
+
+/* ============================================================
+   17. CURSOR & USER INTERACTION
+   ============================================================ */
+.cursor-example {
+    cursor: pointer;
+    /* default, pointer, text, move, grab, grabbing,
+                                      not-allowed, wait, crosshair, help, zoom-in, zoom-out */
+    user-select: none;
+    /* none, text, all, auto - cho phép chọn text */
+    pointer-events: none;
+    /* none, auto - vô hiệu hóa click/hover */
+    touch-action: manipulation;
+    /* auto, none, manipulation */
+    scroll-behavior: smooth;
+    /* auto, smooth */
+}
+
+
+/* ============================================================
+   18. FILTER & BLEND (BỘ LỌC & HỌA TRỘN)
+   ============================================================ */
+.filter-example {
+    filter: blur(5px);
+    /* Làm mờ */
+    filter: brightness(1.5);
+    /* Độ sáng (1 = bình thường) */
+    filter: contrast(200%);
+    /* Tương phản */
+    filter: grayscale(100%);
+    /* Xám */
+    filter: saturate(200%);
+    /* Độ bão hòa */
+    filter: sepia(100%);
+    /* Hiệu ứng cũ */
+    filter: hue-rotate(90deg);
+    /* Xoay màu */
+    filter: invert(100%);
+    /* Đảo ngược màu */
+    filter: opacity(50%);
+    /* Độ mờ */
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+    /* Đổ bóng (theo hình dạng) */
+
+    /* Kết hợp nhiều filter */
+    filter: brightness(1.2) contrast(1.1) saturate(1.3);
+
+    /* Backdrop filter (lọc nền phía sau) */
+    backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px) brightness(0.8);
+}
+
+.blend-example {
+    mix-blend-mode: multiply;
+    /* normal, multiply, screen, overlay, darken, lighten, 
+                                      color-dodge, color-burn, difference, exclusion */
+    background-blend-mode: overlay;
+}
+
+
+/* ============================================================
+   19. CSS VARIABLES (BIẾN CSS)
+   ============================================================ */
+:root {
+    /* Khai báo biến */
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --font-size-base: 16px;
+    --spacing: 8px;
+    --border-radius: 8px;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+.variables-example {
+    /* Sử dụng biến */
+    color: var(--primary-color);
+    font-size: var(--font-size-base);
+    padding: var(--spacing);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+
+    /* Giá trị mặc định nếu biến không tồn tại */
+    margin: var(--custom-margin, 10px);
+}
+
+/* Ghi đè biến trong phạm vi */
+.dark-theme {
+    --primary-color: #4dabf7;
+    --secondary-color: #adb5bd;
+}
+
+
+/* ============================================================
+   20. CLIP-PATH & MASK (CẮT & MẶT NẠ)
+   ============================================================ */
+.clip-path-example {
+    /* Cắt hình dạng */
+    clip-path: circle(50%);
+    /* Hình tròn */
+    clip-path: ellipse(50% 30%);
+    /* Hình elip */
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    /* Tam giác */
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+    /* Hình tùy chỉnh */
+    clip-path: inset(10px 20px 30px 40px round 10px);
+    /* Hình chữ nhật bo góc */
+}
+
+.mask-example {
+    -webkit-mask-image: linear-gradient(to bottom, black, transparent);
+    mask-image: linear-gradient(to bottom, black, transparent);
+}
+
+
+/* ============================================================
+   21. COLUMNS (CỘT VĂN BẢN)
+   ============================================================ */
+.columns-example {
+    column-count: 3;
+    /* Số cột */
+    column-width: 200px;
+    /* Chiều rộng tối thiểu cột */
+    columns: 3 200px;
+    /* Viết tắt: count width */
+    column-gap: 30px;
+    /* Khoảng cách giữa cột */
+    column-rule: 1px solid #ccc;
+    /* Đường kẻ giữa cột */
+    column-span: all;
+    /* none, all - phần tử trải qua tất cả cột */
+}
+
+
+/* ============================================================
+   22. SCROLL (CUỘN)
+   ============================================================ */
+.scroll-example {
+    scroll-behavior: smooth;
+    /* auto, smooth */
+    overscroll-behavior: contain;
+    /* auto, contain, none */
+    scroll-snap-type: y mandatory;
+    /* none, x/y mandatory/proximity */
+    scroll-padding: 20px;
+    scrollbar-width: thin;
+    /* auto, thin, none */
+    scrollbar-color: #888 #f1f1f1;
+    /* thumb track */
+}
+
+.scroll-child {
+    scroll-snap-align: start;
+    /* start, center, end */
+}
+
+/* Tùy chỉnh scrollbar (Webkit) */
+.scroll-example::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scroll-example::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.scroll-example::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.scroll-example::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+/* ============================================================
+   23. ASPECT-RATIO & OBJECT-FIT (TỈ LỆ & KHỚP ĐỐI TƯỢNG)
+   ============================================================ */
+.aspect-ratio-example {
+    aspect-ratio: 16 / 9;
+    /* Tỉ lệ khung hình */
+    aspect-ratio: 1 / 1;
+    /* Hình vuông */
+}
+
+.object-fit-example {
+    object-fit: cover;
+    /* fill, contain, cover, scale-down, none */
+    object-position: center center;
+    /* Vị trí đối tượng */
+    width: 100%;
+    height: 300px;
+}
+
+
+/* ============================================================
+   24. CSS FUNCTIONS (HÀM CSS)
+   ============================================================ */
+.css-functions {
+    /* calc() - Tính toán */
+    width: calc(100% - 40px);
+    height: calc(100vh - 80px);
+    padding: calc(var(--spacing) * 2);
+
+    /* min(), max(), clamp() */
+    width: min(90%, 1200px);
+    font-size: max(16px, 1.2vw);
+    font-size: clamp(14px, 2.5vw, 22px);
+    /* min, ưu tiên, max */
+
+    /* Màu sắc */
+    color: rgb(255, 0, 0);
+    color: rgba(255, 0, 0, 0.5);
+    color: hsl(120, 100%, 50%);
+    color: hsla(120, 100%, 50%, 0.5);
+
+    /* counter() - Đếm tự động */
+    counter-reset: section;
+}
+
+.css-functions h3::before {
+    counter-increment: section;
+    content: counter(section) ". ";
+}
+
+
+/* ============================================================
+   25. @RULES (CÁC QUY TẮC @)
+   ============================================================ */
+
+/* Import file CSS khác */
+@import url("other-styles.css");
+
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* Khai báo font tùy chỉnh */
+@font-face {
+    font-family: "CustomFont";
+    src: url("fonts/custom-font.woff2") format("woff2"),
+        url("fonts/custom-font.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    /* auto, block, swap, fallback, optional */
+}
+
+/* @supports - Kiểm tra hỗ trợ CSS */
+@supports (display: grid) {
+    .container {
+        display: grid;
+    }
+}
+
+@supports not (backdrop-filter: blur(10px)) {
+    .glass {
+        background: rgba(255, 255, 255, 0.9);
+    }
+}
+
+/* @layer - Tầng CSS (quản lý thứ tự ưu tiên) */
+@layer base, components, utilities;
+
+@layer base {
+    body {
+        margin: 0;
+    }
+}
+
+@layer components {
+    .btn {
+        padding: 10px 20px;
+    }
+}
+
+/* @container - Container Query */
+@container (min-width: 400px) {
+    .card {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* ============================================================
+   KẾT THÚC - CSS CƠ BẢN TỔNG HỢP
+   ============================================================ */

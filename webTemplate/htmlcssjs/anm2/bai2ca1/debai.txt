@@ -1,0 +1,22 @@
+Xây dựng ứng dụng Quản lý Sản Phẩm với các chức năng: 
+• Thêm sản phẩm mới: Cho phép nhập các trường thông tin như Tên sản 
+phẩm, Mô tả, Giá, Trạng thái (còn hàng / hết hàng). 
+• Hiển thị danh sách sản phẩm: Hiển thị các sản phẩm dưới dạng danh 
+sách hoặc card, có thể sắp xếp theo giá hoặc trạng thái. 
+• Cập nhật trạng thái sản phẩm: Cho phép thay đổi trạng thái của sản 
+phẩm (ví dụ: đánh dấu sản phẩm đã bán hết). 
+• Xóa sản phẩm: Cho phép xóa sản phẩm khỏi danh sách. 
+Yêu cầu kỹ thuật: 
+• Sử dụng React hooks: useState để quản lý state của danh sách sản phẩm, 
+useEffect để thực hiện các tác vụ như load dữ liệu ban đầu. 
+• Mỗi sản phẩm phải có một ID duy nhất. 
+• Chia nhỏ giao diện thành các component: ví dụ ProductForm, ProductList, 
+ProductItem. 
+• Áp dụng Bootstrap 5 cho giao diện hiện đại, đảm bảo tính responsive và 
+thẩm mỹ.  
+• Sinh viên cần Validate trước khi xác nhận form:  
+o Các trường thông tin không được để trống 
+o Tên sản phẩm không quá 30 kí tự. 
+o Giá sản phẩm: Giá trị không âm.  
+• Sinh viên nên giải thích các phần code liên quan đến Props, State, và các 
+React hooks đã sử dụng.

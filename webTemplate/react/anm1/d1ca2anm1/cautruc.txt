@@ -1,0 +1,12 @@
+
+code/
+├── node_modules/       # Kho chứa thư viện (Đừng động vào)
+├── public/             # Chứa file tĩnh (favicon, robots.txt)
+├── src/                # CODE CỦA BẠN Ở ĐÂY
+│   ├── assets/         # Ảnh, icon
+│   ├── components/     # Các component thành phần (Header, Footer, Form)
+│   ├── App.jsx         # Component chính
+│   └── main.jsx        # Điểm bắt đầu (Entry point)
+├── index.html          # File HTML duy nhất của cả app
+├── package.json        # Khai báo tên dự án, thư viện sử dụng
+└── vite.config.js      # Cấu hình Vite

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách Sinh viên</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container navbar-content">
+            <h1 class="logo">Student Management</h1>
+            <div class="nav-actions">
+                <button class="btn btn-outline">Filter</button>
+                <a href="register-student.html" class="btn btn-primary">+ Add Student</a>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <div class="card list-card">
+            <div id="student-list" class="student-list">
+                <!-- Danh sách sinh viên sẽ được render vào đây -->
+            </div>
+            <div class="pagination-info">
+                Showing 1 to <span id="showing-count">0</span> of <span id="total-count">0</span> entries
+            </div>
+        </div>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="students.js"></script>
+</body>
+</html>

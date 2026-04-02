@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center page-title">STUDENT MANAGEMENT SYSTEM</h1>
+        
+        <div class="summary-box">
+            Tổng số sinh viên: <span id="total-students">0</span> | Điểm TB lớp: <span id="average-gpa">0.00</span>
+        </div>
+
+        <button id="btn-add-student" class="btn btn-add-student">THÊM SINH VIÊN</button>
+
+        <div class="table-wrapper">
+            <table class="table" id="student-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>MÃ SV</th>
+                        <th>HỌ VÀ TÊN</th>
+                        <th>NGÀY SINH</th>
+                        <th>LỚP</th>
+                        <th>ĐTB</th>
+                        <th>ACTIONS</th>
+                    </tr>
+                </thead>
+                <tbody id="student-list">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="student-modal" class="modal">
+        <div class="modal-content">
+            <h2 id="modal-title" class="text-center form-title">Thêm/Sửa Sinh Viên</h2>
+            <form id="student-form">
+                
+                <div class="form-group">
+                    <label for="sv-id">MÃ SINH VIÊN *</label>
+                    <input type="text" id="sv-id" placeholder="VD: SV123456">
+                    <small class="error-msg" id="error-id"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="sv-name">HỌ VÀ TÊN *</label>
+                    <input type="text" id="sv-name">
+                    <small class="error-msg" id="error-name"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="sv-dob">NGÀY SINH *</label>
+                    <input type="date" id="sv-dob" placeholder="mm/dd/yyyy">
+                    <small class="error-msg" id="error-dob"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="sv-class">LỚP HỌC *</label>
+                    <select id="sv-class">
+                        <option value="">Chọn lớp</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                    </select>
+                    <small class="error-msg" id="error-class"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="sv-gpa">ĐIỂM TRUNG BÌNH *</label>
+                    <input type="number" id="sv-gpa" step="0.01" min="0" max="10">
+                    <small class="error-msg" id="error-gpa"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="sv-email">EMAIL SINH VIÊN *</label>
+                    <input type="email" id="sv-email" placeholder="@student.edu.vn">
+                    <small class="error-msg" id="error-email"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="sv-password">MẬT KHẨU TÀI KHOẢN *</label>
+                    <input type="password" id="sv-password" placeholder="Tối thiểu 8 ký tự">
+                    <small class="error-msg" id="error-password"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="sv-confirm-password">XÁC NHẬN MẬT KHẨU *</label>
+                    <input type="password" id="sv-confirm-password">
+                    <small class="error-msg" id="error-confirm-password"></small>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-save">LƯU SINH VIÊN</button>
+                    <button type="button" id="btn-cancel" class="btn btn-cancel">HỦY</button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

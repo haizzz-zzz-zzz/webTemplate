@@ -1,0 +1,36 @@
+Xây dựng ứng dụng Quản lý Công việc (To-Do List nâng cao) với các chức năng: - - - - - - 
+Thêm mới công việc: Cho phép nhập các trường thông tin như Tiêu đề, Mô tả, Độ ưu 
+tiên, Hạn hoàn thành 
+Hiển thị danh sách công việc: Danh sách các công việc được hiển thị dưới dạng card 
+với màu sắc theo độ ưu tiên 
+Cập nhật trạng thái công việc: Cho phép đánh dấu hoàn thành/chưa hoàn thành 
+Chỉnh sửa công việc: Cho phép sửa thông tin của từng công việc đã thêm 
+Xóa công việc: Cho phép xóa công việc khỏi danh sách 
+Lọc công việc: Lọc theo trạng thái (Tất cả / Hoàn thành / Chưa hoàn thành) và độ ưu 
+tiên
+Yêu cầu kỹ thuật: - 
+Sử dụng React hooks: - - - - 
+useState để quản lý state của công việc, trạng thái filter 
+useEffect để xử lý các tác vụ phụ (ví dụ: load dữ liệu mẫu, lưu vào 
+localStorage) 
+useMemo hoặc useCallback để tối ưu performance (nếu có thể) 
+Mỗi công việc cần có một ID duy nhất (có thể dùng Date.now() hoặc uuid) - - - 
+Tách giao diện thành các component riêng biệt: - - - - 
+TaskForm: Form thêm/sửa công việc 
+TaskList: Danh sách công việc 
+TaskItem: Từng công việc 
+FilterBar: Thanh lọc công việc 
+Giao diện sử dụng Bootstrap 5 để tạo style hiện đại và responsive 
+Form thêm Công việc mới cần xác thực dữ liệu đầu vào như sau: - 
+Tiêu đề công việc: - 
+Không được để trống - - - 
+Mô tả: - 
+Không quá 50 ký tự 
+Tối đa 200 ký tự 
+Độ ưu tiên: - 
+Phải chọn một trong ba mức: Thấp, Trung bình, Cao - 
+Hạn hoàn thành: - 
+Không được để trống - 
+Phải là ngày trong tương lai (không được chọn ngày quá khứ) 
+- 
+Sinh viên có thể sử dụng ChatGPT để gợi ý code nhưng phải hiểu rõ ý nghĩa của từng

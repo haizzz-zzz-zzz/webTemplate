@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Quản lý thư viện</title>
+
+<link rel="stylesheet" href="style.css">
+<script src="data.js" defer></script>
+<script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+<button onclick="showAdd()">Thêm sách</button>
+<button onclick="showList()">Quản lý thư viện</button>
+</div>
+
+<!-- TRANG DANH SÁCH -->
+
+<div id="listPage">
+
+<h2>Quản lý thư viện</h2>
+
+<label for="search">Tìm kiếm theo tên hoặc mã sách:</label>
+<input id="search" placeholder="Nhập tên hoặc mã sách">
+<table>
+
+<thead>
+
+<tr>
+<th>Mã sách</th>
+<th>Tên sách</th>
+<th>Tác giả</th>
+<th>Thể loại</th>
+<th>Năm</th>
+<th>Số lượng</th>
+<th>Người thêm</th>
+<th>Ngày thêm</th>
+<th>Thao tác</th>
+</tr>
+
+</thead>
+
+<tbody id="tableBody"></tbody>
+
+</table>
+
+<div id="stats"></div>
+
+</div>
+
+<!-- TRANG THÊM -->
+
+<div id="addPage" style="display:none">
+
+<h2>Thêm sách</h2>
+
+<div class="grid">
+
+<div>
+<label>Mã sách</label>
+<input id="bookId">
+</div>
+
+<div>
+<label>Tên sách</label>
+<input id="titleBook">
+</div>
+
+<div>
+<label>Tác giả</label>
+<input id="author">
+</div>
+
+<div>
+<label>Thể loại</label>
+<select id="category">
+<option value="">Chọn thể loại</option>
+<option>Khoa học</option>
+<option>Văn học</option>
+<option>Lịch sử</option>
+<option>Công nghệ</option>
+<option>Khác</option>
+</select>
+</div>
+
+<div>
+<label>Năm xuất bản</label>
+<input id="year">
+</div>
+
+<div>
+<label>Số lượng</label>
+<input id="quantity">
+</div>
+
+<div>
+<label>Tên người thêm</label>
+<input id="librarian">
+</div>
+
+<div>
+<label>Mã xác thực</label>
+<input id="code">
+</div>
+
+<div>
+<label>Xác nhận mã</label>
+<input id="confirmCode">
+</div>
+
+</div>
+
+<button class="addBtn" onclick="submitForm()">Thêm sách</button>
+
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+Xây dựng ứng dụng Quản lý Chi tiêu cá nhân với các chức năng: - - - - - - - 
+Thêm mới giao dịch: Cho phép nhập các trường thông tin như Tên giao dịch, Loại 
+(Thu/Chi), Số tiền, Danh mục, Ngày giao dịch 
+Hiển thị danh sách giao dịch: Danh sách các giao dịch được hiển thị dưới dạng card 
+hoặc bảng với màu sắc phân biệt thu/chi 
+Hiển thị tổng quan: Tổng thu nhập, tổng chi tiêu, số dư hiện tại 
+Chỉnh sửa giao dịch: Cho phép sửa thông tin của từng giao dịch đã thêm 
+Xóa giao dịch: Cho phép xóa giao dịch khỏi danh sách 
+Lọc và tìm kiếm: Lọc theo loại (Thu/Chi), danh mục, và khoảng thời gian 
+Biểu đồ thống kê: Hiển thị biểu đồ chi tiêu theo danh mục (tùy chọn nâng cao) 
+Yêu cầu kỹ thuật: - 
+Sử dụng React hooks: - 
+useState để quản lý state của giao dịch, filter, balance - - - - 
+useEffect để xử lý các tác vụ phụ (load dữ liệu, lưu vào localStorage, tính toán 
+số dư) 
+useMemo để tối ưu tính toán tổng thu/chi 
+useCallback cho các hàm xử lý (nếu có thể) 
+Mỗi giao dịch cần có một ID duy nhất (có thể dùng Date.now() hoặc uuid) - - - 
+Tách giao diện thành các component riêng biệt: - - - - - 
+TransactionForm: Form thêm/sửa giao dịch 
+TransactionList: Danh sách giao dịch 
+TransactionItem: Từng giao dịch 
+Summary: Tổng quan thu/chi/số dư 
+FilterBar: Thanh lọc và tìm kiếm 
+Giao diện sử dụng Bootstrap 5 để tạo style hiện đại và responsive 
+Form thêm Giao dịch mới cần xác thực dữ liệu đầu vào như sau: - 
+Tên giao dịch: - 
+Không được để trống - - 
+Từ 3 đến 100 ký tự 
+Loại giao dịch: - 
+Phải chọn một trong hai: Thu nhập hoặc Chi tiêu - 
+Số tiền: - 
+Không được để trống 
+Phải là số dương 
+Lớn hơn 0 và nhỏ hơn 1,000,000,000 - - - - - 
+Danh mục: - - 
+Không được để trống 
+Chọn từ danh sách: Lương, Thưởng, Đầu tư (Thu) / Ăn uống, Di chuyển, 
+Giải trí, Học tập, Khác (Chi) 
+Ngày giao dịch: - 
+Không được để trống - 
+Không được là ngày tương lai 
+Sinh viên có thể sử dụng ChatGPT để gợi ý code nhưng phải hiểu rõ ý nghĩa của từng 
+phần 

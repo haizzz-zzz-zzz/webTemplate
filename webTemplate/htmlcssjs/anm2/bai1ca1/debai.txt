@@ -1,0 +1,36 @@
+Bối cảnh:      
+Sinh viên sẽ phát triển một hệ thống quản lý thông tin sinh viên cho phép đăng 
+ký và quản lý danh sách sinh viên. Hệ thống gồm 02 trang: trang đăng ký sinh 
+viên và trang danh sách sinh viên với các thao tác CRUD cơ bản. 
+Yêu cầu: 
+1. Trang đăng ký sinh viên (register-student.html): 
+o Các trường thông tin: 
+▪ Họ và tên sinh viên 
+▪ Mã sinh viên 
+▪ Email 
+▪ Số điện thoại 
+▪ Ngành học (Select hoặc Radio) 
+▪ Giới tính (Radio button: Nam/Nữ) 
+o Validate form sử dụng jQuery hoặc JS Validate: 
+▪ Họ và tên sinh viên: không được để trống. 
+▪ Mã sinh viên: phải có định dạng hợp lệ (theo quy định của 
+trường, ví dụ: SVxxx). 
+▪ Email: kiểm tra định dạng email. 
+▪ Số điện thoại: chỉ chấp nhận số, có độ dài tối thiểu. 
+▪ Người dùng phải chọn ngành học và giới tính. 
+o Sau khi đăng ký thành công, lưu thông tin sinh viên vào Local 
+Storage và chuyển hướng sang trang danh sách sinh viên. 
+2. Trang danh sách sinh viên (students.html): 
+o Hiển thị danh sách sinh viên đăng ký dưới dạng bảng, lấy dữ liệu từ 
+Local Storage. 
+o Mỗi dòng của bảng bao gồm các thao tác: Sửa và Xoá thông tin sinh 
+viên. 
+o Cho phép chỉnh sửa thông tin sinh viên: khi chọn sửa, hiển thị form 
+với dữ liệu đã có để sinh viên có thể cập nhật. 
+o Khi chọn xoá, yêu cầu xác nhận trước khi xoá sinh viên khỏi danh 
+sách. 
+3. Thiết kế giao diện: 
+o Áp dụng CSS để bố trí trang web hợp lý, tạo trải nghiệm người dùng 
+tốt với giao diện trực quan và hiện đại. 
+o Tách biệt rõ ràng các phần: form đăng ký, bảng danh sách, thông báo 
+lỗi validate. 
